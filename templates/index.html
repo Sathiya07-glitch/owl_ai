@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Owl AI - Home</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f8fb;
+        margin: 0;
+      }
+      .navbar {
+        background: #222;
+        color: #fff;
+        padding: 1em 2em;
+      }
+      .navbar h1 {
+        display: inline;
+        font-size: 1.5em;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2em auto;
+        background: #fff;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #0001;
+      }
+      .hero {
+        text-align: center;
+        margin-bottom: 2em;
+      }
+      .hero h2 {
+        color: #2b7a78;
+      }
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: center;
+      }
+      .feature {
+        flex: 1 1 200px;
+        background: #e0f7fa;
+        padding: 1em;
+        border-radius: 6px;
+        min-width: 200px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 2em;
+        color: #888;
+      }
+      .feature img {
+        width: 100%;
+        max-width: 220px; /* Add this line */
+        border-radius: 6px;
+        margin-bottom: 1em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .navbar img {
+        height: 40px;
+        width: 40px; /* Add this line for square logo */
+        margin-right: 1em;
+        border-radius: 50%;
+        background: #fff;
+        object-fit: cover; /* Add this for better logo fit */
+      }
+      @media (max-width: 600px) {
+        .features {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Owl AI</h1>
+    </div>
+    <div class="container">
+      <div class="hero">
+        <h2>Welcome to Owl AI</h2>
+        <p>
+          Empowering your business with Artificial Intelligence solutions.<br />
+          Explore our AI-powered tools and services to automate, analyze, and
+          accelerate your workflow.
+        </p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <img
+            src="{{ url_for('static', filename='images/automation.jpg') }}"
+            alt="Automation"
+          />
+          <h3>AI Automation</h3>
+          <p>
+            Automate repetitive tasks and boost productivity with our
+            intelligent automation solutions.
+          </p>
+          <a href="{{ url_for('automation') }}">Learn More</a>
+        </div>
+        <div class="feature">
+          <img
+            src="{{ url_for('static', filename='images/analytics.jpg') }}"
+            alt="Analytics"
+          />
+          <h3>Data Analytics</h3>
+          <p>
+            Gain insights from your data using advanced analytics and machine
+            learning models.
+          </p>
+          <a href="{{ url_for('analytics') }}">Learn More</a>
+        </div>
+        <div class="feature">
+          <img
+            src="{{ url_for('static', filename='images/custom.jpg') }}"
+            alt="Custom Solutions"
+          />
+          <h3>Custom Solutions</h3>
+          <p>
+            We build tailored AI solutions to fit your unique business needs and
+            challenges.
+          </p>
+          <a href="{{ url_for('custom') }}">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">&copy; 2025 Owl AI | Powered by Overloadware Labs</div>
+  </body>
+</html>

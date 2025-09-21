@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title or "Owl AI" }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <img
+        src="{{ url_for('static', filename='images/logo.jpg') }}"
+        alt="Owl AI Logo"
+      />
+      <a
+        href="{{ url_for('home') }}"
+        class="{% if title=='Home' %}active{% endif %}"
+        >Home</a
+      >
+      <a
+        href="{{ url_for('automation') }}"
+        class="{% if title=='Automation' %}active{% endif %}"
+        >Automation</a
+      >
+      <a
+        href="{{ url_for('analytics') }}"
+        class="{% if title=='Analytics' %}active{% endif %}"
+        >Analytics</a
+      >
+      <a
+        href="{{ url_for('custom') }}"
+        class="{% if title=='Custom Solutions' %}active{% endif %}"
+        >Custom Solutions</a
+      >
+    </div>
+    <div class="container">{% block content %}{% endblock %}</div>
+    <div class="footer">&copy; 2025 Owl AI | Powered by Overloadware Labs</div>
+  </body>
+</html>
